@@ -1,0 +1,71 @@
+/* Styles for the Userback toggle button in the WordPress admin bar */
+
+/* Ensure the SVG uses the same color as Dashicons */
+#wp-admin-bar-matchbox_userback_toggle .dashicon-style {
+    fill: #ddd; /* Default color for Dashicons */
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#wp-admin-bar-matchbox_userback_toggle:hover .dashicon-style {
+    fill: #fff; /* Hover color for Dashicons */
+}
+
+/* Center the SVG and text vertically */
+#wp-admin-bar-matchbox_userback_toggle .ab-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Pill-style toggle container */
+#wpadminbar .matchbox-pill-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background: #ddd; /* Default background */
+    border-radius: 20px; /* Rounded pill shape */
+    width: 50px; /* Fixed width for toggle */
+    height: 24px; /* Fixed height for toggle */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, border-color 0.3s ease;
+    border: 2px solid #2c3338; /* Border color */
+    margin-top: 2px;
+}
+
+/* Toggle state styles */
+#wpadminbar .matchbox-pill-toggle.show {
+    background: #FF4060; /* Show state background color */
+}
+
+/* Toggle icon wrapper */
+#wpadminbar .matchbox-pill-toggle .toggle-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px; /* Icon container width */
+    height: 22px; /* Icon container height */
+    border-radius: 50%;
+    background: #fff; /* Background color for icon */
+    position: absolute;
+    left: 26px;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    transition: left 0.3s ease;
+}
+
+/* Position the toggle icon for the show state */
+#wpadminbar .matchbox-pill-toggle.show .toggle-icon {
+    left: 2px; /* Move icon to the left when active */
+}
+
+/* Styles for the SVG inside the toggle */
+#wpadminbar .matchbox-pill-toggle .toggle-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #FF4060; /* Default color for SVG */
+}
+
+#wpadminbar .matchbox-pill-toggle.show .toggle-icon svg {
+    fill: #FF4060; /* White color for SVG in active state */
+}
