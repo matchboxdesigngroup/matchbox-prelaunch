@@ -11,7 +11,7 @@
  * 
  * Plugin Name:       Matchbox Prelaunch
  * Description:       Enable Matchbox testing tools.
- * Version:           0.2.0
+ * Version:           1.0.0
  * Plugin URI:        https://github.com/matchboxdesigngroup/matchbox-prelaunch/
  * Author:            Matchbox, Cullen Whitmore
  * Author URI:        https://matchboxdesigngroup.com
