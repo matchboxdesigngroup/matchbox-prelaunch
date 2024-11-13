@@ -1,24 +1,38 @@
 <?php
 
 /**
+ *  Matchbox Prelaunch plugin for WordPress
+ *
+ * @package           matchbox-prelaunch
+ * @link              https://github.com/matchboxdesigngroup/matchbox-prelaunch/
+ * @author            Matchbox, Cullen Whitmore
+ * @copyright         2024 Matchbox Design Group
+ * @license           GPL v2 or later
+ * 
  * Plugin Name:       Matchbox Prelaunch
  * Description:       Enable Matchbox testing tools.
- * Requires at least: 6.2
- * Requires PHP:      8.0
  * Version:           0.2.0
+ * Plugin URI:        https://github.com/matchboxdesigngroup/matchbox-prelaunch/
  * Author:            Matchbox, Cullen Whitmore
  * Author URI:        https://matchboxdesigngroup.com
+ * Text Domain:       matchbox-prelaunch
+ * Requires at least: 6.2
+ * Requires PHP:      8.0
  * License:           GNU General Public License v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       matchbox-prelaunch
+ *
+ * This program is free software; you can redistribute it and/or modify it under 
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation; either version 2 of the License, or( at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  *
  * This file represents the entry point for the Matchbox Prelaunch plugin where it handles
  * the initial setup like defining constants and including the core plugin class. It's
  * responsible for initiating the plugin's functionality by setting up necessary hooks
  * and loading required files.
- *
- * @package matchbox-prelaunch
- * @since 0.1.0
  */
 
 // Hook into WordPress admin initialization for setting up the settings page.
