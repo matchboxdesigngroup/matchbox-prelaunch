@@ -40,6 +40,37 @@ add_action('admin_init', 'matchbox_prelaunch_settings_init');
 add_action('admin_menu', 'matchbox_prelaunch_settings_menu');
 
 /**
+ * Initialize Plugin Update Checker for GitHub-hosted updates.
+ *
+ * This function sets up the Plugin Update Checker (PUC) to check for plugin updates from
+ * the specified GitHub repository. It is configured to look for the latest release
+ * of the plugin, allowing the plugin to automatically fetch updates when a new version
+ * is tagged in GitHub.
+ *
+ * @link https://github.com/YahnisElsts/plugin-update-checker?tab=readme-ov-file#github-integration
+ * @return void
+ * @since 0.3.0
+ */
+function matchbox_prelaunch_initialize_update_checker() {
+    // Check if the Plugin Update Checker class exists to prevent potential conflicts.
+    if ( !class_exists('YahnisElsts\PluginUpdateChecker\v5\PucFactory') ) {
+        require_once plugin_dir_path(__FILE__) . 'includes/plugin-update-checker/plugin-update-checker.php';
+    }
+
+    // Initialize the update checker for the GitHub-hosted plugin.
+    $updateChecker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+        'https://github.com/matchboxdesigngroup/matchbox-prelaunch',
+        __FILE__,
+        'matchbox-prelaunch'
+    );
+
+    // Configure the update checker to look for GitHub release assets.
+    $updateChecker->getVcsApi()->enableReleaseAssets();
+}
+add_action('plugins_loaded', 'matchbox_prelaunch_initialize_update_checker');
+
+
+/**
  * Initialize the plugin settings by registering the settings, sections, and fields.
  *
  * This function sets up the necessary components for a settings page within the WordPress admin.
