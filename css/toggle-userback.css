@@ -48,7 +48,7 @@
     border-radius: 50%;
     background: #fff; /* Background color for icon */
     position: absolute;
-    left: 26px;
+    left: 2px;
     top: 50%;
     transform: translateY(-50%); /* Center vertically */
     transition: left 0.3s ease;
@@ -56,7 +56,7 @@
 
 /* Position the toggle icon for the show state */
 #wpadminbar .matchbox-pill-toggle.show .toggle-icon {
-    left: 2px; /* Move icon to the left when active */
+    left: 26px; /* Move icon to the left when active */
 }
 
 /* Styles for the SVG inside the toggle */
